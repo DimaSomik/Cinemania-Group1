@@ -1,12 +1,12 @@
 body {
     background: #111111;
+    font-family: Roboto, sans-serif;
 }
 
 
 .upcoming-title {
     width: 275px;
     text-transform: uppercase;
-    font-family: Roboto;
     font-size: 24px;
     font-weight: 500;
     line-height: 28.13px;
@@ -34,7 +34,7 @@ body {
 .upcoming-title {
     letter-spacing: .02em;
     text-transform: uppercase;
-    color: #B7B7B7;
+    color: #FFFFFF;
     align-items: center;
     margin-top: 20px;
     margin-bottom: 16px;
@@ -44,6 +44,81 @@ body {
     display: flex;
 }
 
+.upcoming-box{
+    max-width: 280px;
+}
+
+.upcoming-box-title{
+    text-transform: uppercase;
+    width: 194px;
+    height: 33px;
+    top: 1389px;
+    left: 32px;
+    gap: 0px;
+    opacity: 0px;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 32.81px;
+    text-align: left;
+    color: #FFFFFF;
+}
+
+.upcoming-info-text{
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 18.75px;
+    text-align: left;
+    color: #B7B7B7;
+}
+
+.upcoming-info-date{
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 18.75px;
+    text-align: left;
+    color: #F87719;
+}
+
+
+
+.upcoming-info-vote{
+    display: flex;
+}
+
+.vote{
+    letter-spacing: .02em;
+    text-transform: uppercase;
+    color: #111111;
+    background-color: #FFFFFF;
+    border-radius: 5px;
+    padding: 1px 8px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.14286;
+}
+
+.slash{
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin-left: 4px;
+    margin-right: 4px;
+}
+
+.upcoming-info-number{
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 18.75px;
+    text-align: left;
+    color: #FFFFFF;
+}
+
+.upcoming-text{
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: left;
+    color: #F8F8F8;
+}
 
 
 @media screen and (min-width: 320px) {
