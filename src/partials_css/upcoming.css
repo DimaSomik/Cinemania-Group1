@@ -3,15 +3,29 @@ body {
     font-family: Roboto, sans-serif;
 }
 
+ul {
+    list-style-type: none;
+}
+
+.container{
+    margin-left: 20px;
+}
 
 .upcoming-title {
-    width: 275px;
+    width: 204px;
     text-transform: uppercase;
-    font-size: 24px;
+    font-size: 16px;
     font-weight: 500;
-    line-height: 28.13px;
+    line-height: 18.75px;
     text-align: left;
     color: #ffffff;
+    /* margin-left: 20px; */
+    letter-spacing: .02em;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 24px;
+    font-size: 16px;
+    display: flex;
 }
 
 .upcoming-content {
@@ -19,29 +33,15 @@ body {
 }
 
 .upcoming-img {
-    width: 704px;
-    height: 400px;
-    top: 957px;
-    left: 32px;
+    width: 280px;
+    height: 402px;
+    top: 992px;
+    left: 20px;
     gap: 0px;
     border-radius: 5px 0px 0px 0px;
     border: none;
     opacity: 0px;
-    background: linear-gradient(307.47deg, rgba(0, 0, 0, 0.2) 23.85%, rgba(0, 0, 0, 0) 47.27%);
     display: block;
-}
-
-.upcoming-title {
-    letter-spacing: .02em;
-    text-transform: uppercase;
-    color: #FFFFFF;
-    align-items: center;
-    margin-top: 20px;
-    margin-bottom: 16px;
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 1.1875;
-    display: flex;
 }
 
 .upcoming-box{
@@ -58,31 +58,51 @@ body {
     opacity: 0px;
     font-size: 20px;
     font-weight: 500;
-    line-height: 32.81px;
+    line-height: 23.44px;
     text-align: left;
     color: #FFFFFF;
 }
 
+.upcoming-info-list-left{
+    padding: 0;
+}
+
+.upcoming-info-list-right {
+    padding: 0;
+}
+
+.upcoming-info-list-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .upcoming-info-text{
+    width: 100%;
     font-size: 16px;
     font-weight: 500;
     line-height: 18.75px;
     text-align: left;
     color: #B7B7B7;
+    flex: 1;
 }
 
 .upcoming-info-date{
+    width: 82px;
     font-size: 16px;
     font-weight: 500;
     line-height: 18.75px;
     text-align: left;
     color: #F87719;
+    flex-basis: 82px;
+    text-align: left;
 }
-
-
 
 .upcoming-info-vote{
     display: flex;
+    align-items: center;
+    flex-basis: 82px;
+    justify-content: flex-start;
 }
 
 .vote{
@@ -108,8 +128,9 @@ body {
     font-size: 16px;
     font-weight: 500;
     line-height: 18.75px;
-    text-align: left;
     color: #FFFFFF;
+    flex-basis: 82px;
+    justify-content: flex-start;
 }
 
 .upcoming-text{
@@ -119,6 +140,22 @@ body {
     text-align: left;
     color: #F8F8F8;
 }
+
+.upcoming-title-about{
+    width: 63.53px;
+    height: 19px;
+    top: 1593px;
+    left: 22px;
+    gap: 0px;
+    opacity: 0px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 18.75px;
+    text-align: left;
+    color: #B7B7B7;
+    text-transform: uppercase;
+}
+
 
 
 @media screen and (min-width: 320px) {
