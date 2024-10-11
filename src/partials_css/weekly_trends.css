@@ -24,4 +24,11 @@
   gap: 109px;
 }
 #movies-card {
+  width: 280px;
+  height: 406px;
+  background-color: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 63.48%,
+    rgba(0, 0, 0, 0.9) 92.16%
+  );
 }
