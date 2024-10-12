@@ -1,19 +1,20 @@
-// Function to open details modal
+const API_KEY = 'YOUR_API_KEY'; // API klucz do TMDB
+
+// Funkcja otwierająca modal z informacjami szczegółowymi
 function openDetailsModal(movieId) {
-  fetch(`https://api.themoviedb.org/3/movie/${movieId}?api_key=f52c3ffdf66aaeb5254a201d7e7eb83b&language=en-US`)
+  fetch(`https://api.themoviedb.org/3/movie/${movieId}?api_key=${API_KEY}&language=en-US`)
     .then(response => response.json())
     .then(data => {
-      // Populate modal with data
-      document.querySelector('.modal-movie-title').innerText = data.title;
-      document.querySelector('.modal-movie-rating').innerText = data.vote_average;
-      document.querySelector('.modal-movie-details p:nth-of-type(3)').innerText = data.popularity;
-      document.querySelector('.modal-movie-details p:nth-of-type(4)').innerText = data.genres.map(genre => genre.name).join(' ');
-      document.querySelector('.modal-movie-details p:nth-of-type(6)').innerText = data.overview;
-      document.getElementById('detailsModal').style.display = 'flex'; // Open modal
+      document.querySelector('.ModalMovieTitle').innerText = data.title;
+      document.querySelector('.ModalMovieRating').innerText = data.vote_average;
+      document.querySelector('.ModalMovieDetails p:nth-of-type(3)').innerText = data.popularity;
+      document.querySelector('.ModalMovieDetails p:nth-of-type(4)').innerText = data.genres.map(genre => genre.name).join(' ');
+      document.querySelector('.ModalMovieDetails p:nth-of-type(6)').innerText = data.overview;
+      document.getElementById('detailsModal').style.display = 'flex'; // Otwórz modal
     });
 }
 
-// Function to close details modal
+// Funkcja zamykająca modal
 function closeDetailsModal() {
   document.getElementById('detailsModal').style.display = 'none';
 }

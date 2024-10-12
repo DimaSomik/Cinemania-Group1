@@ -1,4 +1,4 @@
-.movie-card {
+.MovieCard {
   display: flex;
   gap: 20px;
   padding: 20px;
@@ -7,24 +7,24 @@
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.movie-poster {
+.MoviePoster {
   width: 300px;
   height: auto;
   border-radius: 8px;
 }
 
-.movie-details {
+.MovieDetails {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
-.movie-title {
+.MovieTitle {
   font-size: 1.8em;
   margin: 0;
 }
 
-.library-btn {
+.LibraryBtn {
   padding: 10px 20px;
   background-color: #ff6b6b;
   color: white;
@@ -33,7 +33,7 @@
   cursor: pointer;
 }
 
-.modal {
+.Modal {
   display: none;
   position: fixed;
   top: 0;
@@ -45,11 +45,9 @@
   align-items: center;
 }
 
-.modal-content {
+.ModalContent {
   width: 846px;
-  /* Szerokość modalnego okna */
   height: 598px;
-  /* Wysokość modalnego okna */
   background-color: white;
   padding: 20px;
   border-radius: 8px;
@@ -58,22 +56,22 @@
   position: relative;
 }
 
-.modal-poster {
+.ModalPoster {
   width: 300px;
   border-radius: 8px;
 }
 
-.modal-movie-details {
+.ModalMovieDetails {
   display: flex;
   flex-direction: column;
 }
 
-.modal-movie-title {
+.ModalMovieTitle {
   font-size: 1.8em;
   margin: 0;
 }
 
-.close {
+.CloseBtn {
   position: absolute;
   top: 10px;
   right: 20px;
