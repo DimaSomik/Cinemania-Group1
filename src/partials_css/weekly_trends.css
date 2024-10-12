@@ -39,3 +39,8 @@
     width: 100vh;
   }
 }
+@media (min-width: 768px) {
+  #movies-list {
+    gap: 447px;
+  }
+}
