@@ -5,12 +5,43 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Page title</title>
-    <link rel="stylesheet" href="./sass/index.scss" />
-    <script type="module" src="./index.js"></script>
+    <link rel="stylesheet" href="../partials_css/modal_1.css" />
+    <script type="module" src="../partials_js/modal_1.js"></script>
 </head>
 
 <body>
+    <div class="movie-card">
+        <img src="https://image.tmdb.org/t/p/original/${film.backdrop_path}" alt="${film.title}" class="movie-poster">
+        <div class="movie-details">
+            <h2 class="movie-title">${film.title}</h2>
+            <p><strong>Vote / Votes:</strong> <span class="movie-rating">${film.vote_average}</span> / ${film.vote_count}
+            </p>
+            <p><strong>Popularity:</strong> ${film.popularity}</p>
+            <p><strong>Genre:</strong> ${film.genres.map(genre => genre.name).join(' ')}</p>
+            <h3>ABOUT</h3>
+            <p>${film.overview}</p>
+            <button class="library-btn">Add to my library</button>
+        </div>
+    </div>
     
+    <!-- Modal for More Details -->
+    <div id="detailsModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeDetailsModal()">&times;</span>
+            <img src="https://image.tmdb.org/t/p/original/${film.backdrop_path}" alt="${film.title}" class="modal-poster">
+            <div class="modal-movie-details">
+                <h2 class="modal-movie-title">${film.title}</h2>
+                <p><strong>Vote / Votes:</strong> <span class="modal-movie-rating">${film.vote_average}</span> /
+                    ${film.vote_count}</p>
+                <p><strong>Popularity:</strong> ${film.popularity}</p>
+                <p><strong>Genre:</strong> ${film.genres.map(genre => genre.name).join(' ')}</p>
+                <h3>ABOUT</h3>
+                <p>${film.overview}</p>
+                <button class="library-btn">Add to my library</button>
+            </div>
+        </div>
+    </div>
+
 </body>
 
 </html>
