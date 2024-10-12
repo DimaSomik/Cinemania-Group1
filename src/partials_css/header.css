@@ -82,6 +82,7 @@ body.light-theme .header-span {
   line-height: 28px;
   z-index: 2;
   transition: color var(--transition-curve) var(--transition-duration);
+  color: var(--pure-white);
 }
 
 .header-mobile-menu {
