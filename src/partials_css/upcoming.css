@@ -23,7 +23,6 @@ ul {
     align-items: center;
     margin-top: 20px;
     margin-bottom: 24px;
-    font-size: 16px;
     display: flex;
 }
 
@@ -107,7 +106,7 @@ ul {
     justify-content: flex-start;
 }
 
-.vote{
+.upcoming-vote{
     letter-spacing: .02em;
     text-transform: uppercase;
     color: #111111;
@@ -119,7 +118,9 @@ ul {
     line-height: 1.14286;
 }
 
-.slash{
+
+
+.upcoming-slash{
     text-transform: uppercase;
     color: #FFFFFF;
     margin-left: 4px;
@@ -178,7 +179,163 @@ ul {
 
 
 
-@media screen and (min-width: 320px) {
+@media screen and (min-width: 768px) {
+        .upcoming-title {
+            width: 300px;
+            font-size: 24px;
+            line-height: 28.13px;
+            margin-top: 20px;
+            margin-bottom: 44px;
+        }
     
+        .upcoming-img {
+            width: 704px;
+            height: 402px;
+            top: 957px;
+        }
+    
+        .upcoming-box {
+            max-width: 640px;
+        }
+    
+        .upcoming-box-title {
+            font-size: 28px;
+            line-height: 32.81px;
+            margin-top: 32px;
+            margin-bottom: 24px;
+        }
+
+        .upcoming-info {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+    
+        .upcoming-info-list-left {
+            flex-basis: 48%;
+            margin-top: 0;
+        }
+    
+        .upcoming-info-list-right {
+            flex-basis: 48%;
+            margin-top: 0;
+        }
+            
+    
+        .upcoming-text {
+            width: 100%;
+        }
+    
+        .upcoming-title-about {
+            margin-top: 4px;
+        }
+    
+        .upcoming-button {
+            width: 155px;
+            height: 40px;
+            font-size: 14px;
+            line-height: 16.41px;
+            margin-left: -4px;
+        }
 }
 
+@media screen and (min-width: 1024px) {
+    .container {
+        margin-left: 32px;
+    }
+
+    .upcoming-title {
+        width: 340px;
+        font-size: 28px;
+        line-height: 32.81px;
+        margin-bottom: 28px;
+    }
+
+    .upcoming-content{
+        display: flex;
+        justify-content: space-between;
+        align-items: stretch;
+    }
+
+    .upcoming-img {
+        width: 805px;
+        height: 458px;
+        top: 992px;
+        display: block;
+        max-width: 70%;
+        height: auto;
+        margin-left: 0px;
+    }
+
+    .upcoming-box {
+        max-width: 400px;
+        margin-left: 16px;
+        flex: 1;
+        padding: 0px;
+    }
+
+    .upcoming-box-title {
+        width: 100%;
+        height: 38px;
+        font-size: 32px;
+        line-height: 37.5px;
+        margin-top: 0px;
+        margin-bottom: 28px;
+    }
+
+    .upcoming-info {
+        display: block;
+    }
+
+    .upcoming-info-list-left {
+        margin: 0;
+    }
+
+    .upcoming-info-list-right {
+        margin: 0;
+    }
+
+    .upcoming-info-list-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 0px;
+    }
+
+    .upcoming-info-text{
+        margin-bottom: 12px;
+        margin-top: 0px;
+    }
+
+
+    .upcoming-info-date {
+        margin-bottom: 12px;
+        margin-top: 0px;
+    }
+
+    .upcoming-info-vote {
+        margin-bottom: 12px;
+        margin-top: 0px;
+    }
+
+    .upcoming-vote {
+        margin-bottom: 12px;
+        margin-top: 0px;
+    }
+
+
+    .upcoming-slash {
+        margin-bottom: 12px;
+        margin-top: 0px;
+    }
+
+    .upcoming-info-number {
+        margin-bottom: 12px;
+        margin-top: 0px;
+    }
+
+
+    .upcoming-title-about {
+        margin-top: 8px;
+    }
+}
