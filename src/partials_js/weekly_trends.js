@@ -19,7 +19,7 @@ function getMoviesPerLoad() {
 
 // Funkcja do pobierania gatunków z TMDb API
 function getGenres() {
-  const url = `https://api.themoviedb.org/3/genre/movie/list?api_key=${API_KEY}&language=pl-PL`;
+  const url = `https://api.themoviedb.org/3/genre/movie/list?api_key=${apiKey}&language=pl-PL`;
 
   return fetch(url)
     .then(response => response.json())
@@ -31,7 +31,7 @@ function getGenres() {
 
 // Funkcja do pobierania filmów z TMDb API
 function getMovies(page) {
-  const url = `https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}&language=pl-PL&page=${page}`;
+  const url = `https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}&language=pl-PL&page=${page}`;
 
   fetch(url)
     .then(response => response.json())
