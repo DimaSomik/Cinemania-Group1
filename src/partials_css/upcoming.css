@@ -75,7 +75,7 @@ ul {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 0px;
+    margin-bottom: 12px;
 }
 
 .upcoming-info-text{
@@ -160,6 +160,7 @@ ul {
     color: #B7B7B7;
     text-transform: uppercase;
     margin-top: 20px;
+    margin-bottom: 16px;
 }
 
 .upcoming-button{
