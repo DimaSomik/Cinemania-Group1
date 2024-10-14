@@ -191,7 +191,8 @@ ul {
         .upcoming-img {
             width: 704px;
             height: 402px;
-            top: 957px;
+            object-fit: contain;
+                
         }
     
         .upcoming-box {
@@ -199,6 +200,7 @@ ul {
         }
     
         .upcoming-box-title {
+            width: fit-content;
             font-size: 28px;
             line-height: 32.81px;
             margin-top: 32px;
@@ -253,7 +255,7 @@ ul {
 
     .upcoming-content{
         display: flex;
-        justify-content: space-between;
+        justify-content: flex-start;
         align-items: stretch;
     }
 
@@ -263,7 +265,6 @@ ul {
         top: 992px;
         display: block;
         max-width: 70%;
-        height: auto;
         margin-left: 0px;
     }
 
@@ -275,7 +276,7 @@ ul {
     }
 
     .upcoming-box-title {
-        width: 100%;
+        width: fit-content;
         height: 38px;
         font-size: 32px;
         line-height: 37.5px;
