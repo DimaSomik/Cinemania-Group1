@@ -1,0 +1,67 @@
+/* Modal container */
+.Modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black background with opacity */
+}
+
+/* Modal content box */
+.ModalContent {
+    background-color: white;
+    width: 700px;
+    height: 400px;
+    border-radius: 20px;
+    margin: 15% auto;
+    padding: 20px;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Close button */
+.CloseBtn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Modal body content */
+.ModalBody {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Image in the modal */
+.ModalBody img {
+    width: 363px;
+    height: 318px;
+}
+
+/* Text message */
+.Message {
+    padding-left: 20px;
+}
+
+.Message h2 {
+    margin: 0;
+    font-size: 24px;
+    color: #333;
+}
+
+.Message p {
+    font-size: 18px;
+    color: #666;
+    margin-top: 10px;
+}
