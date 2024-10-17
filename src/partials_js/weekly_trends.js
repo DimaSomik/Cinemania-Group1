@@ -1,4 +1,5 @@
-const apiKey = '2fd9551be199200f928abc93ae4bceb1'; // Wstaw swój klucz API
+import { getGenres } from "./api";
+import { getPopularMoviesWeek } from "./api";
 
 let page = 1;
 let currentMovieIndex = 0; // Index aktualnie wyświetlanego filmu
@@ -17,33 +18,17 @@ function getMoviesPerLoad() {
   }
 }
 
-// Funkcja do pobierania gatunków z TMDb API
-function getGenres() {
-  const url = `https://api.themoviedb.org/3/genre/movie/list?api_key=${apiKey}&language=pl-PL`;
+async function getMovies(page = 1) {
+  const fetchGenres = await getGenres();
+  genres = fetchGenres;
 
-  return fetch(url)
-    .then(response => response.json())
-    .then(data => {
-      genres = data.genres;
-    })
-    .catch(error => console.log(error));
-}
-
-// Funkcja do pobierania filmów z TMDb API
-function getMovies(page) {
-  const url = `https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}&language=pl-PL&page=${page}`;
-
-  fetch(url)
-    .then(response => response.json())
-    .then(data => {
-      moviesList = moviesList.concat(data.results); // Dodaj filmy do listy
-      displayMovies(); // Wyświetl filmy z nowo pobranych
-    })
-    .catch(error => console.log(error));
+  const fetchData = await getPopularMoviesWeek(page);
+  moviesList = moviesList.concat(fetchData.results); // Dodaj filmy do listy
+  displayMovies(); // Wyświetl filmy z nowo pobranych
 }
 
 // Funkcja do dopasowania gatunków do filmów
-function getGenreNames(genreIds) {
+export function getGenreNames(genreIds) {
   return genreIds
     .map(id => {
       const genre = genres.find(g => g.id === id);
@@ -107,7 +92,7 @@ loadMoreButton.addEventListener('click', () => {
 });
 
 // Najpierw pobierz listę gatunków, a potem filmy
-getGenres().then(() => getMovies(page));
+getMovies(page);
 
 let moviesLoaded = false;
 
