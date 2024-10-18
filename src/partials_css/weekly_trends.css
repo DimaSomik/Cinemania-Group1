@@ -7,6 +7,9 @@
 .body-style {
   background-color: rgba(17, 17, 17, 1);
 }
+body.light-theme .body-style {
+  background-color: #ffffff;
+}
 .text-style {
   font-family: Roboto;
   font-size: 16px;
@@ -15,6 +18,11 @@
   text-align: left;
   color: rgba(255, 255, 255, 1);
 }
+
+body.light-theme .text-style {
+  color: #111111;
+}
+
 .paragraph-style {
   font-family: Roboto;
   font-size: 16px;
@@ -26,6 +34,11 @@
   border: none;
   background-color: black;
 }
+
+body.light-theme .paragraph-style {
+  background-color: #ffffff;
+}
+
 #movies-list {
   display: flex;
   flex-direction: row;
@@ -77,6 +90,11 @@
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
   font-weight: bold;
 }
+
+body.light-theme .movie-title {
+  color: black;
+}
+
 .movie-info {
   display: flex;
   flex-direction: column;
@@ -95,6 +113,11 @@
 .movie-info p {
   color: rgba(183, 183, 183, 1);
 }
+
+body.light-theme .movie-info {
+  color: #111111;
+}
+
 .stars {
   margin: 12px 0;
   width: 14px;

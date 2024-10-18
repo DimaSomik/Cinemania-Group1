@@ -63,7 +63,6 @@ function displayMovies() {
       const movieCard = document.createElement('div');
       movieCard.classList.add('movie-card');
 
-      // Spróbuj tutaj h2 i p owinąć kolejnym div'em, i w stylach usunąć flex direction: column.
       movieCard.innerHTML = `
         <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt="${
         movie.title
