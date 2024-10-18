@@ -112,7 +112,7 @@ body.light-theme .movie-info {
   gap: 0px;
   opacity: 0px;
   color: rgba(248, 119, 25, 1);
-  position: absolute;
+  /* position: absolute; */ /* Nie moze tutaj byc wartosc absolute, poniewaz cala responsywnosc nam sie psuje */
   top: 20%;
   left: 150%;
 }
