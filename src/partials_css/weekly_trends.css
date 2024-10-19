@@ -117,6 +117,7 @@
   justify-content: space-between;
   gap: 16px;
   display: block;
+  overflow-y: auto;
 }
 
 @media (min-width: 768px) {
