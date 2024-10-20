@@ -25,6 +25,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
 }
 
 /* Close button */
@@ -41,17 +42,17 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-direction: column;
 }
 
-/* Image in the modal */
 .ModalBody img {
     width: 363px;
     height: 318px;
 }
 
-/* Text message */
 .Message {
-    padding-left: 20px;
+    padding-left: 0;
+    text-align: center;
 }
 
 .Message h2 {
@@ -64,4 +65,50 @@
     font-size: 18px;
     color: #666;
     margin-top: 10px;
+}
+
+/* Responsiveness */
+@media screen and (max-width: 768px) {
+    .ModalContent {
+        width: 90%;
+        height: auto;
+        margin: 20% auto;
+    }
+
+    .ModalBody {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .ModalBody img {
+        width: 300px;
+        height: auto;
+    }
+
+    .Message {
+        padding-left: 0;
+        margin-top: 20px;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .ModalContent {
+        width: 95%;
+        height: auto;
+        margin: 25% auto;
+    }
+
+    .ModalBody img {
+        width: 100%;
+        height: auto;
+    }
+
+    .Message h2 {
+        font-size: 20px;
+    }
+
+    .Message p {
+        font-size: 16px;
+    }
 }
