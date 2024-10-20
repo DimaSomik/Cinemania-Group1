@@ -5,6 +5,7 @@
   background-color: #fff;
   border-radius: 8px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  flex-wrap: wrap;
 }
 
 .MoviePoster {
@@ -54,6 +55,7 @@
   display: flex;
   gap: 20px;
   position: relative;
+  flex-wrap: wrap;
 }
 
 .ModalPoster {
@@ -77,4 +79,59 @@
   right: 20px;
   font-size: 1.5em;
   cursor: pointer;
+}
+
+/* Responsywność dla mniejszych ekranów */
+@media (max-width: 768px) {
+  .MovieCard {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .MoviePoster {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .MovieTitle {
+    font-size: 1.5em;
+    text-align: center;
+  }
+
+  .ModalContent {
+    width: 90%;
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .ModalPoster {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .ModalMovieTitle {
+    font-size: 1.5em;
+    text-align: center;
+  }
+
+  .LibraryBtn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .MovieTitle {
+    font-size: 1.2em;
+  }
+
+  .ModalMovieTitle {
+    font-size: 1.2em;
+  }
+
+  .LibraryBtn {
+    padding: 8px 16px;
+    font-size: 0.9em;
+  }
 }
