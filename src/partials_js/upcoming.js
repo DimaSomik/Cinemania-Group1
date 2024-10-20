@@ -32,8 +32,9 @@ function getRandomMovie(movies) {
 (async () => {
   const fetchGenres = await getGenres();
   genres = fetchGenres;
+  const page = 1;
 
-  const fetchUpcomingMovies = await getUpcomingMovies();
+  const fetchUpcomingMovies = await getUpcomingMovies(page);
   const randomMovie = getRandomMovie(fetchUpcomingMovies.results); 
   displayMovie(randomMovie); 
 })();
