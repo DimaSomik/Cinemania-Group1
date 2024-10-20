@@ -33,7 +33,7 @@ function getRandomMovie(movies) {
   const fetchGenres = await getGenres();
   genres = fetchGenres;
 
-  const fetchUpcomingMovies = await getUpcomingMovies(page = 1);
+  const fetchUpcomingMovies = await getUpcomingMovies();
   const randomMovie = getRandomMovie(fetchUpcomingMovies.results); 
   displayMovie(randomMovie); 
 })();
