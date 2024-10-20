@@ -140,7 +140,7 @@ body.light-theme .movie-info {
   justify-content: space-between;
   gap: 16px;
   display: block;
-  overflow-y: auto;
+  overflow-y: overlay;
 }
 
 @media (min-width: 768px) {
