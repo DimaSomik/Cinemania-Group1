@@ -1,22 +1,9 @@
-<!DOCTYPE html>
-<html lang="ang">
-  <head>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TMDb App</title>
-    <link rel="stylesheet" href="style.css">
-    
-</head>
-<body class="body-style">
-  <div id="movies-list">
-    <h3 class="text-style">WEEKLY TRENDS</h3>
-    <p class="paragraph-style" id="load-more">See all</p>
-  </div>
-     <div class="movie-container" id="movies">
-    </div>
-  
-    <script type="module" src="script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-</body>
-</html>
+<div id="movies-list">
+  <h3 class="text-style">WEEKLY TRENDS</h3>
+  <button class="paragraph-style" id="load-more" onclick="loadMoreMovies()">
+    See all
+  </button>
+</div>
+<div class="movie-container" id="movies"></div>
+
+<script type="module" src="/src/partials_js/weekly_trends.js"></script>

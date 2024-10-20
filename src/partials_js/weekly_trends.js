@@ -1,4 +1,5 @@
-const apiKey = '2fd9551be199200f928abc93ae4bceb1'; // Wstaw swój klucz API
+import { getGenres } from './api';
+import { getPopularMoviesWeek } from './api';
 
 let page = 1;
 let currentMovieIndex = 0; // Index aktualnie wyświetlanego filmu
@@ -17,33 +18,17 @@ function getMoviesPerLoad() {
   }
 }
 
-// Funkcja do pobierania gatunków z TMDb API
-function getGenres() {
-  const url = `https://api.themoviedb.org/3/genre/movie/list?api_key=${API_KEY}&language=pl-PL`;
+async function getMovies(page = 1) {
+  const fetchGenres = await getGenres();
+  genres = fetchGenres;
 
-  return fetch(url)
-    .then(response => response.json())
-    .then(data => {
-      genres = data.genres;
-    })
-    .catch(error => console.log(error));
-}
-
-// Funkcja do pobierania filmów z TMDb API
-function getMovies(page) {
-  const url = `https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}&language=pl-PL&page=${page}`;
-
-  fetch(url)
-    .then(response => response.json())
-    .then(data => {
-      moviesList = moviesList.concat(data.results); // Dodaj filmy do listy
-      displayMovies(); // Wyświetl filmy z nowo pobranych
-    })
-    .catch(error => console.log(error));
+  const fetchData = await getPopularMoviesWeek(page);
+  moviesList = moviesList.concat(fetchData.results); // Dodaj filmy do listy
+  displayMovies(); // Wyświetl filmy z nowo pobranych
 }
 
 // Funkcja do dopasowania gatunków do filmów
-function getGenreNames(genreIds) {
+export function getGenreNames(genreIds) {
   return genreIds
     .map(id => {
       const genre = genres.find(g => g.id === id);
@@ -83,7 +68,7 @@ function displayMovies() {
         movie.title
       }">
         <div class="movie-info">
-          <h2 class="movie-title">${movie.title}</h2>
+          <h2 class="movie-title">${movie.title}</h2> 
           <p>${genreNames} | ${movie.release_date.split('-')[0]}</p>
           <div class="stars">${getStars(movie.vote_average)}</div>
         </div>
@@ -107,4 +92,35 @@ loadMoreButton.addEventListener('click', () => {
 });
 
 // Najpierw pobierz listę gatunków, a potem filmy
-getGenres().then(() => getMovies(page));
+getMovies(page);
+
+let moviesLoaded = false;
+
+function loadMoreMovies() {
+  if (!moviesLoaded) {
+    // Symulacja ładowania filmów (w rzeczywistości tu może być API)
+    const newMovies = [
+      { title: 'Movie 4', year: 2023 },
+      { title: 'Movie 5', year: 2023 },
+      { title: 'Movie 6', year: 2023 },
+    ];
+
+    const movieList = document.getElementById('movies');
+
+    newMovies.forEach(movie => {
+      const movieCard = document.createElement('div');
+      movieCard.classList.add('movie-card');
+      movieCard.innerHTML = `
+        <h3>${movie.title}</h3>
+        <p>${movie.year}</p>
+      `;
+      movieList.insertBefore(movieCard, document.getElementById('load more')); // Wstaw przed przyciskiem
+    });
+
+    // Zaznacz, że załadowano filmy, aby zapobiec wielokrotnemu ładowaniu
+    moviesLoaded = true;
+
+    // Możesz ukryć przycisk See All, jeśli nie chcesz go pokazywać po załadowaniu
+    document.getElementById('load more').style.display = 'none';
+  }
+}
