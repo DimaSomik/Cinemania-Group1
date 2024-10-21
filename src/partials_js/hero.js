@@ -26,7 +26,7 @@ function createStars(num, list) {
                                                             <stop class="Stop2" offset="100%" />
                                                         </linearGradient>
                                                     </defs>
-                                                    <use href="/icons.adfc4680.svg#icon-star" fill="url(#Gradient1)"></use>
+                                                    <use href="./images/icons.svg#icon-star" fill="url(#Gradient1)"></use>
                                                 </svg>
                                               </li>`);
     }
