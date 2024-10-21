@@ -1,6 +1,6 @@
-.HeroBox {
-    background-image:  linear-gradient(86.47deg, #111111 33.63%, rgba(0, 0, 0, 0) 76.86%),
-                       url('../images/heroBackground.jpg');
+ .HeroBox {
+    /* background-image:  linear-gradient(86.47deg, #111111 33.63%, rgba(0, 0, 0, 0) 76.86%),
+                       url('../images/heroBackground.jpg'); */
     width: 100vw;
     height: 100vh;
     background-size: cover;
@@ -120,8 +120,8 @@
 
 @media (768px <= width < 1279px) {
     .HeroBox {
-        background-image:  linear-gradient(86.47deg, #111111 40%, rgba(0, 0, 0, 0) 87%),
-                           url('../images/heroBackground.jpg');
+        /* background-image:  linear-gradient(86.47deg, #111111 40%, rgba(0, 0, 0, 0) 87%),
+                           url('../images/heroBackground.jpg'); */
         padding: 40px;
     }
 
@@ -160,8 +160,8 @@
 
 @media (min-width: 1280px) {
     .HeroBox {
-        background-image:  linear-gradient(86.47deg, #111111 40%, rgba(0, 0, 0, 0) 87%),
-                           url('../images/heroBackground.jpg');
+        /* background-image:  linear-gradient(86.47deg, #111111 40%, rgba(0, 0, 0, 0) 87%),
+                           url('../images/heroBackground.jpg'); */
         row-gap: 30px;
         padding: 150px;
     }
