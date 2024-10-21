@@ -73,8 +73,7 @@ body.light-theme .upcoming-title {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-    }
-
+}
 
 body.light-theme .upcoming-box-title {
   color: #111111;
