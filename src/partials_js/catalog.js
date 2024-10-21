@@ -146,7 +146,7 @@ function generatePageButtons(currentPage, totalPages) {
     addDots(paginationContainer);
     createPageButton(totalPages, currentPage, paginationContainer); // Ostatnia strona
   } else if (endPage === totalPages - 1) {
-    createPageButton(totalPages, currentPage, paginationContainer); // Jeśli jesteśmy na przedostatniej stronie, dodaj tylko ostatnią stronę
+    createPageButton(totalPages, currentPage, paginationContainer);
   }
 }
 
@@ -170,6 +170,9 @@ function initializePagination() {
 
 async function handleSearch() {
   const query = document.querySelector('.catalog-search-input').value.trim();
+  const paginationContainer = document.querySelector(
+    '.catalog-pagination-container'
+  );
 
   if (!query) return;
 
@@ -185,6 +188,7 @@ async function handleSearch() {
         <span>We are very sorry!</span>
         <span>We don't have any results matching your search.</span>
       </p>`;
+    paginationContainer.style.display = 'none';
   }
 }
 
