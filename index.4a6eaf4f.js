@@ -6,8 +6,8 @@
                                                             <stop class="Stop2" offset="100%" />
                                                         </linearGradient>
                                                     </defs>
-                                                    <use href="/icons.adfc4680.svg#icon-star" fill="url(#Gradient1)"></use>
+                                                    <use href="./images/icons.svg#icon-star" fill="url(#Gradient1)"></use>
                                                 </svg>
                                               </li>`)}(Math.round(t.vote_average/2),document.querySelector(".HeroStarsList")),document.querySelector(".HeroBox").style.backgroundImage=`linear-gradient(86.47deg, #111111 33.63%, rgba(0, 0, 0, 0) 76.86%),
                                                                 url(https://image.tmdb.org/t/p/original${t.backdrop_path})`}(function(t){let e=Math.floor(Math.random()*t.length);return t[e]}((await (0,a.getPopularMoviesToday)(1)).results))})()}();
-//# sourceMappingURL=index.af29dae8.js.map
+//# sourceMappingURL=index.4a6eaf4f.js.map
