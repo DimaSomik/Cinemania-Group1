@@ -23,13 +23,13 @@ function displayMovie(movie) {
   document.getElementById('movieImg').src = posterPath;
 }
 
-export function getRandomMovie(movies) {
+function getRandomMovie(movies) {
   const randomIndex = Math.floor(Math.random() * movies.length);
   return movies[randomIndex];
 }
 
 (async () => {
-  const fetchGenres = getGenres();
+  const fetchGenres = await getGenres();
   genres = fetchGenres;
 
   const fetchUpcomingMovies = await getUpcomingMovies(1);
