@@ -1,6 +1,6 @@
 import { getPopularMoviesToday } from './api';
 import { openDetailsModal } from './modal_1';
-// import { getRandomMovie } from './upcoming';
+import { getRandomMovie } from './upcoming';
 
 const BACKGROUND_URL = "https://image.tmdb.org/t/p/original";
 
