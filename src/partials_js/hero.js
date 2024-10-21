@@ -4,10 +4,10 @@ import { getRandomMovie } from './upcoming';
 
 const BACKGROUND_URL = "https://image.tmdb.org/t/p/original";
 
-function getRandomMovie(movies) {
-    const randomIndex = Math.floor(Math.random() * movies.length);
-    return movies[randomIndex];
-};
+// function getRandomMovie(movies) {
+//     const randomIndex = Math.floor(Math.random() * movies.length);
+//     return movies[randomIndex];
+// };
 
 function truncate(str, no_words) {
     return str.split(" ").splice(0,no_words).join(" ");
