@@ -285,18 +285,26 @@ body.light-theme .upcoming-title-about {
   }
 
   .upcoming-content {
+    max-width: 1211px;
     display: flex;
     justify-content: flex-start;
     align-items: stretch;
   }
 
-  .upcoming-img {
+  .upcoming-img-box{
     width: 805px;
-    height: 458px;
+    max-height: 485px;
+  }
+
+
+  .upcoming-img {
+    width: 100%;
+    height: auto;
+    max-height: 458px;
     top: 992px;
     display: block;
-    max-width: 70%;
     margin-left: 0px;
+    object-fit: contain;
   }
 
   .upcoming-box {
