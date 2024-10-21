@@ -3,7 +3,7 @@ import { getGenres } from "./api";
 import { getGenreNames } from "./weekly_trends";
 
 const IMG_BASE_URL = 'https://image.tmdb.org/t/p/w500';
-const genres = [];
+let genres = [];
 
 function displayMovie(movie) {
   document.getElementById('movieTitle').textContent = movie.title;
