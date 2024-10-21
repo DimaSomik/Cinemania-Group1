@@ -1,9 +1,7 @@
 import { getUpcomingMovies } from "./api";
-import { getGenres } from "./api";
 import { getGenreNames } from "./weekly_trends";
 
 const IMG_BASE_URL = 'https://image.tmdb.org/t/p/w500';
-let genres = [];
 
 function displayMovie(movie) {
   document.getElementById('movieTitle').textContent = movie.title;
@@ -23,18 +21,13 @@ function displayMovie(movie) {
   document.getElementById('movieImg').src = posterPath;
 }
 
-
-function getRandomMovie(movies) {
+export function getRandomMovie(movies) {
   const randomIndex = Math.floor(Math.random() * movies.length);
   return movies[randomIndex];
 }
 
 (async () => {
-  const fetchGenres = await getGenres();
-  genres = fetchGenres;
-  const page = 1;
-
-  const fetchUpcomingMovies = await getUpcomingMovies(page);
+  const fetchUpcomingMovies = await getUpcomingMovies(1);
   const randomMovie = getRandomMovie(fetchUpcomingMovies.results); 
   displayMovie(randomMovie); 
 })();
