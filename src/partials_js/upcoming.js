@@ -1,56 +1,42 @@
-const API_KEY = 'cc77d73a1f36cdb91d7e6b21f538344a';
-const BASE_URL = 'https://api.themoviedb.org/3';
+import { getUpcomingMovies } from "./api";
+import { getGenres } from "./api";
+import { getGenreNames } from "./weekly_trends";
+
 const IMG_BASE_URL = 'https://image.tmdb.org/t/p/w500';
-
-
-async function getUpcomingMovies(page = 1) {
-  const response = await axios.get(`${BASE_URL}/movie/upcoming`, {
-    params: {
-      api_key: API_KEY,
-      page: page,
-    },
-  });
-  return {
-    results: response.data.results,
-    totalPages: response.data.total_pages,
-  };
-}
-
+let genres = [];
 
 function displayMovie(movie) {
-    document.getElementById('movieTitle').textContent = movie.title;
-    
-  document.getElementById('releaseDate').textContent = movie.release_date;
-
-  document.getElementById('movieVote').textContent = movie.vote_average;
+  document.getElementById('movieTitle').textContent = movie.title;
+  document.getElementById('releaseDate').textContent = movie.release_date.replaceAll("-", ".");
+  let movieVoteAvarage = Number(movie.vote_average).toFixed(1);
+  document.getElementById('movieVote').textContent = movieVoteAvarage;
   document.getElementById('movieVotes').textContent = movie.vote_count;
-
-  document.getElementById('moviePopularity').textContent = movie.popularity;
-
+  let moviePopularity = Number(movie.popularity).toFixed(1);
+  document.getElementById('moviePopularity').textContent = moviePopularity;
   
-  const genreList = movie.genre_ids; 
-  document.getElementById('movieGenre').textContent = genreList.length > 0 ? genreList[0] : 'Unknown';
-
+  const genreNames = getGenreNames(movie.genre_ids);
+  document.getElementById('movieGenre').textContent = genreNames;
   
   document.getElementById('movieOverview').textContent = movie.overview;
-
   
   const posterPath = movie.poster_path ? `${IMG_BASE_URL}${movie.poster_path}` : '../images/placeholder.jpg';
   document.getElementById('movieImg').src = posterPath;
 }
-
 
 function getRandomMovie(movies) {
   const randomIndex = Math.floor(Math.random() * movies.length);
   return movies[randomIndex];
 }
 
+(async () => {
+  const fetchGenres = await getGenres();
+  genres = fetchGenres;
+  const page = 1;
 
-getUpcomingMovies().then(data => {
-  const randomMovie = getRandomMovie(data.results); 
+  const fetchUpcomingMovies = await getUpcomingMovies(page);
+  const randomMovie = getRandomMovie(fetchUpcomingMovies.results); 
   displayMovie(randomMovie); 
-});
-
+})();
 
 const libraryButton = document.getElementById('libraryButton');
 
@@ -61,3 +47,4 @@ libraryButton.addEventListener('click', function () {
     libraryButton.textContent = 'Add to my library';
   }
 });
+
