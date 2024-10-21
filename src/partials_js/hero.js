@@ -1,5 +1,4 @@
 import { getPopularMoviesToday } from './api';
-import { openDetailsModal } from './modal_1';
 
 const BACKGROUND_URL = "https://image.tmdb.org/t/p/original";
 
