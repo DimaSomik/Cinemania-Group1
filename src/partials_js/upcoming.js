@@ -1,7 +1,9 @@
 import { getUpcomingMovies } from "./api";
+import { getGenres } from "./api";
 import { getGenreNames } from "./weekly_trends";
 
 const IMG_BASE_URL = 'https://image.tmdb.org/t/p/w500';
+const genres = [];
 
 function displayMovie(movie) {
   document.getElementById('movieTitle').textContent = movie.title;
@@ -27,6 +29,9 @@ export function getRandomMovie(movies) {
 }
 
 (async () => {
+  const fetchGenres = getGenres();
+  genres = fetchGenres;
+
   const fetchUpcomingMovies = await getUpcomingMovies(1);
   const randomMovie = getRandomMovie(fetchUpcomingMovies.results); 
   displayMovie(randomMovie); 
