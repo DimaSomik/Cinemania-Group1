@@ -11,7 +11,7 @@ ul {
   list-style-type: none;
 }
 
-.container {
+.upcoming-container {
   margin-left: 20px;
 }
 
@@ -57,7 +57,6 @@ body.light-theme .upcoming-title {
 
 .upcoming-box-title {
   text-transform: uppercase;
-  width: 194px;
   height: 33px;
   top: 1389px;
   left: 32px;
@@ -69,6 +68,11 @@ body.light-theme .upcoming-title {
   text-align: left;
   color: #ffffff;
   margin-top: 24px;
+  display: inline-block;
+  max-width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 body.light-theme .upcoming-box-title {
@@ -269,7 +273,7 @@ body.light-theme .upcoming-title-about {
 }
 
 @media screen and (min-width: 1024px) {
-  .container {
+  .upcoming-container {
     margin-left: 32px;
   }
 

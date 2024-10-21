@@ -41,3 +41,4 @@ libraryButton.addEventListener('click', function () {
     libraryButton.textContent = 'Add to my library';
   }
 });
+
