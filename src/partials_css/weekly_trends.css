@@ -53,8 +53,13 @@ body.light-theme .paragraph-style {
   height: 406px;
   border-radius: 5px 5px 5px 5px;
   flex-basis: calc(33.333% - 24px);
-  margin-bottom: 16px;
+  margin-bottom: 28px;
   position: relative;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 63.48%,
+    rgba(0, 0, 0, 0.9) 85.16%
+  );
 }
 .movie-card::after {
   content: '';
@@ -68,6 +73,7 @@ body.light-theme .paragraph-style {
     rgba(0, 0, 0, 0) 63.48%,
     rgba(0, 0, 0, 0.9) 85.16%
   );
+  margin-bottom: 28px;
   z-index: 1;
 }
 

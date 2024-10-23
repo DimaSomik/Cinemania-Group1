@@ -39,18 +39,22 @@ export function getGenreNames(genreIds) {
 }
 
 function getStars(vote) {
-  const fullStars = Math.floor(vote / 2);
+  const fullStars = Math.floor(vote / 2); // Pełne gwiazdki
+  const halfStar = (vote / 2) % 1 !== 0; // Sprawdź, czy jest półgwiazdka
   let stars = '';
+
   for (let i = 0; i < 5; i++) {
     if (i < fullStars) {
       stars += '&#9733;'; // Pełna gwiazdka
+    } else if (i === fullStars && halfStar) {
+      stars += '&#189;'; // Pół gwiazdki
     } else {
       stars += '&#9734;'; // Pusta gwiazdka
     }
   }
+
   return stars;
 }
-
 // Funkcja do wyświetlania filmów
 function displayMovies() {
   const moviesPerLoad = getMoviesPerLoad(); // Pobierz liczbę filmów do załadowania
