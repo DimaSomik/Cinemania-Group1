@@ -55,6 +55,11 @@ body.light-theme .paragraph-style {
   flex-basis: calc(33.333% - 24px);
   margin-bottom: 28px;
   position: relative;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 63.48%,
+    rgba(0, 0, 0, 0.9) 85.16%
+  );
 }
 .movie-card::after {
   content: '';
